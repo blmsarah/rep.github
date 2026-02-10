@@ -1,0 +1,20 @@
+name: Amnesie
+
+#Event trigeer qui implique de déclencher le workflow manuellement
+on: worlflow_dispath
+
+env:
+    Name: Sarah
+
+    jobs:
+        say_hello:
+            runs-on: ubuntu-latest
+            env:
+                entreprise: balloumi
+                steps:
+                    - name: "dit bonjour"
+                    run: echo "Salut $Name ! Tu travailles chrz $Entreprise ? alors bon $day à toi !"
+                    env:
+                        Day: mardi
+                        - name: "dit bonjour"
+                        run: echo "salut $Name !"
