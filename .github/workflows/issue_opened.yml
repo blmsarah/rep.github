@@ -2,7 +2,8 @@ name: Issue créée
 
 on:
   issues:
-    types: [opened]
+    types:
+      - opened
 
 jobs:
   issue-created:
