@@ -1,0 +1,19 @@
+name: Fruits et Noms
+
+on:
+  workflow_dispatch:
+
+jobs:
+  combinaison:
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: true
+      matrix:
+        fruit: [pomme, banane, fraise, orange]
+        nom: [Michel, Sophie, Karim]
+
+    steps:
+      - name: Afficher la phrase
+        run: |
+          echo "${{ matrix.nom }} mange une ${{ matrix.fruit }}, et il adore ça !"
